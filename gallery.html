@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- SEO TITLE -->
+    <title>Wedding Band Gallery Dehradun | Suraj Band</title>
+
+    <!-- META DESCRIPTION -->
+    <meta
+      name="description"
+      content="Explore Suraj Band’s wedding gallery showcasing royal barat processions, traditional band performances and wedding celebrations in Dehradun."
+    />
+
+    <!-- KEYWORDS -->
+    <meta
+      name="keywords"
+      content="wedding band gallery Dehradun, barat band images, Suraj Band gallery"
+    />
+
+    <meta name="author" content="Suraj Band" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- LOCAL SEO -->
+    <meta name="geo.placename" content="Dehradun" />
+    <meta name="geo.region" content="IN-UK" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="main-header">
+      <div class="logo">SURAJ BAND</div>
+
+      <!-- Hamburger Icon -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <nav id="mobileMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- PAGE INTRO -->
+    <section class="about-preview" style="margin-top: 100px">
+      <h1>Wedding Gallery – Suraj Band Dehradun</h1>
+      <p>
+        A glimpse of our royal wedding processions and musical celebrations.
+      </p>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery-section">
+      <h2>Royal Wedding Moments</h2>
+
+      <div class="gallery-slider" id="gallerySlider">
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img
+            src="assets/images/gallery1.jpeg"
+            alt="Royal wedding barat procession in Dehradun"
+          />
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img
+            src="assets/images/gallery2.jpg"
+            alt="Traditional wedding band performance"
+          />
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img
+            src="assets/images/gallery3.jpeg"
+            alt="Wedding dhol band night procession"
+          />
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img
+            src="assets/images/gallery4.jpeg"
+            alt="Suraj Band musicians at wedding"
+          />
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img
+            src="assets/images/gallery5.jpeg"
+            alt="Indian royal wedding band Dehradun"
+          />
+        </div>
+      </div>
+
+      <!-- SLIDER CONTROLS -->
+      <div class="slider-controls">
+        <button class="slider-btn" onclick="slideLeft()">←</button>
+        <button class="slider-btn" onclick="slideRight()">→</button>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="trust">
+      <div class="trust-box">📞 Like What You See? Call Us Today</div>
+      <div class="trust-box">💬 WhatsApp for Wedding Booking</div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Suraj Band, Dehradun. All Rights Reserved.</p>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <a href="tel:+91XXXXXXXXXX" class="floating-call">📞</a>
+    <a
+      href="https://wa.me/91XXXXXXXXXX"
+      class="floating-whatsapp"
+      aria-label="Chat on WhatsApp"
+      target="_blank"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JS -->
+    <script src="javascript/main.js"></script>
+
+    <!-- SLIDER SCRIPT -->
+    <script>
+      const slider = document.getElementById("gallerySlider");
+
+      function slideLeft() {
+        slider.scrollLeft -= 320;
+      }
+
+      function slideRight() {
+        slider.scrollLeft += 320;
+      }
+    </script>
+    <!-- LIGHTBOX -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Wedding band gallery image" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+/* =========================
+   TABLETS (≤ 1024px)
+========================= */
+@media (max-width: 1024px) {
+  .main-header {
+    padding: 12px 20px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 36px;
+  }
+
+  .hero-overlay p {
+    font-size: 17px;
+  }
+
+  .services-preview,
+  .about-preview {
+    padding: 60px 25px;
+  }
+
+  /* Testimonials: 2 cards */
+  .testimonial-card {
+    flex: 0 0 50%;
+  }
+}
+
+/* =========================
+   MOBILE & SMALL TABLETS (≤ 768px)
+========================= */
+@media (max-width: 768px) {
+  /* show hamburger */
+  .menu-toggle {
+    display: block;
+    z-index: 1300;
+  }
+
+  .hero-overlay h1 {
+    font-size: 36px;
+  }
+
+  .hero-overlay p {
+    font-size: 17px;
+  }
+  /* off-canvas menu */
+  nav {
+    position: fixed;
+    top: 0;
+    right: -260px; /* hidden off-screen */
+    width: 260px;
+    height: 100vh;
+    background: #7a1e1e;
+    transition: right 0.4s ease;
+    padding-top: 80px; /* space below header */
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.35);
+  }
+
+  .hero {
+    height: 65vh; /* was ~75–100vh */
+    min-height: 480px;
+  }
+  
+  .cta {
+    padding: 10px 26px;     /* reduced padding */
+    font-size: 14px;        /* smaller text */
+    border-width: 1.5px;
+    margin-top: 18px;
+  }
+
+  nav.active {
+    right: 0; /* slide in */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 0 24px;
+    list-style: none;
+  }
+
+  nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+  }
+}
+
+/* =========================
+   SMALL PHONES (≤ 480px)
+========================= */
+@media (max-width: 480px) {
+  .hero-overlay h1 {
+    font-size: 24px;
+  }
+
+  .hero-overlay p {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 90%;
+    margin: 8px auto;
+    display: block;
+  }
+}
+
+
+/* =========================
+   TRUST NEWS TICKER (MOBILE)
+========================= */
+@media (max-width: 768px) {
+  .trust {
+    display: block !important;
+    overflow: hidden !important;
+    padding: 18px 0;
+    text-align: left;
+  }
+
+  .trust-track {
+    display: flex;
+    width: max-content;
+    gap: 36px;
+    animation: trustScroll 25s linear infinite;
+  }
+
+  .trust-box {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    padding-right: 28px;
+    position: relative;
+  }
+
+  .trust-box::after {
+    content: "•";
+    position: absolute;
+    right: 10px;
+    color: #d4af37;
+    font-size: 18px;
+  }
+
+  /* Pause animation when user touches */
+  .trust:hover .trust-track {
+    animation-play-state: paused;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero-overlay {
+    padding-top: 70px;     /* space below header */
+  }
+
+}
+
+/* =========================
+   TRUST NEWS TICKER — MOBILE ONLY (SAFE)
+========================= */
+@media (max-width: 768px) {
+
+  section.trust {
+    display: block;
+    overflow: hidden;
+    background: #7a1e1e;
+    padding: 18px 0;
+  }
+
+  section.trust .trust-track {
+    display: flex;
+    gap: 36px;
+    width: max-content;
+    animation: trustScroll 28s linear infinite;
+  }
+
+  section.trust .trust-box {
+    all: unset;                  /* reset desktop styles */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    white-space: nowrap;
+    position: relative;
+    padding-right: 28px;
+  }
+
+  section.trust .trust-box::after {
+    content: "•";
+    position: absolute;
+    right: 10px;
+    color: #d4af37;
+    font-size: 18px;
+  }
+
+  section.trust:hover .trust-track {
+    animation-play-state: paused;
+  }
+}
+
+/* smooth, no-delay animation */
+@keyframes trustScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  section.trust {
+    overflow: hidden !important;
+  }
+}
