@@ -74,6 +74,41 @@ document.addEventListener("DOMContentLoaded", function () {
     images.forEach(img => observer.observe(img));
 });
 
+const heroSlides = document.querySelectorAll('.hero-slide');
+
+if (heroSlides.length > 0) {
+  let currentSlide = 0;
+
+  setInterval(() => {
+    heroSlides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % heroSlides.length;
+    heroSlides[currentSlide].classList.add('active');
+  }, 5000);
+}
+
+const testimonialTrack = document.querySelector('.testimonial-track');
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+if (testimonialTrack && testimonialCards.length > 0) {
+  let index = 0;
+
+  setInterval(() => {
+    const cardWidth = testimonialCards[0].offsetWidth;
+    index = (index + 1) % testimonialCards.length;
+    testimonialTrack.style.transform = `translateX(-${index * cardWidth}px)`;
+  }, 4000);
+}
+
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+}
+
+
 /* =========================
    GALLERY LIGHTBOX
 ========================= */
@@ -148,3 +183,40 @@ function slideTestimonials() {
 
 setInterval(slideTestimonials, 4000);
 
+let currentSlide = 0;
+const slides = document.querySelectorAll(".hero-slide");
+
+function showNextSlide() {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+}
+
+setInterval(showNextSlide, 4000);
+if (window.innerWidth <= 768) {
+    const slider = document.querySelector(".modern-services");
+    let scrollAmount = 0;
+  
+    setInterval(() => {
+      scrollAmount += slider.offsetWidth * 0.5;
+      if (scrollAmount >= slider.scrollWidth) scrollAmount = 0;
+  
+      slider.scrollTo({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+    }, 4000);
+  }
+
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    });
+  });
+  
+  document.getElementById('lightbox').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+  });
+  
+  

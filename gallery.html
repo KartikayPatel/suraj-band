@@ -72,51 +72,55 @@
 
     <!-- GALLERY SECTION -->
     <section class="gallery-section">
-      <h2>Royal Wedding Moments</h2>
-
-      <div class="gallery-slider" id="gallerySlider">
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img
-            src="assets/images/gallery1.jpeg"
-            alt="Royal wedding barat procession in Dehradun"
-          />
+      <h2 class="gallery-title">Royal Wedding Moments</h2>
+      <div class="gallery-viewport">
+      <div class="gallery-grid" id="galleryGrid">
+        
+        <!-- IMAGE -->
+        <div class="gallery-item">
+          <img src="assets/images/background/1.JPG" loading="lazy" alt="Wedding Band Performance">
         </div>
-
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img
-            src="assets/images/gallery2.jpg"
-            alt="Traditional wedding band performance"
-          />
+    
+        <div class="gallery-item wide">
+          <img src="assets/images/barat-band2.jpeg" loading="lazy" alt="Royal Barat">
         </div>
-
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img
-            src="assets/images/gallery3.jpeg"
-            alt="Wedding dhol band night procession"
-          />
+    
+        <!-- VIDEO -->
+        <div class="gallery-item video">
+          <video src="assets/videos/barat-video2.mp4" muted autoplay loop></video>
         </div>
-
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img
-            src="assets/images/gallery4.jpeg"
-            alt="Suraj Band musicians at wedding"
-          />
+    
+        <div class="gallery-item tall">
+          <img src="assets/images/barat-band3.jpeg" loading="lazy" alt="">
         </div>
-
-        <div class="gallery-item" onclick="openLightbox(this)">
-          <img
-            src="assets/images/gallery5.jpeg"
-            alt="Indian royal wedding band Dehradun"
-          />
+    
+        <div class="gallery-item">
+          <img src="assets/images/ghodi-Baggi2.jpeg" loading="lazy" alt="">
+        </div>
+    
+        <div class="gallery-item tall">
+          <img src="assets/images/ghodi-Baggi.jpeg"loading="lazy"  alt="">
+        </div>
+    
+        <div class="gallery-item wide">
+          <img src="assets/images/background/2.JPG" loading="lazy" alt="">
+        </div>
+    
+        <div class="gallery-item">
+          <img src="assets/images/barat-band.jpeg"loading="lazy"  alt="">
+        </div>
+    
+        <div class="gallery-item tall">
+          <video src="assets/videos/barat-video.mp4" muted autoplay loop></video>
         </div>
       </div>
+    </div>
 
-      <!-- SLIDER CONTROLS -->
-      <div class="slider-controls">
-        <button class="slider-btn" onclick="slideLeft()">←</button>
-        <button class="slider-btn" onclick="slideRight()">→</button>
-      </div>
-    </section>
+    <div class="gallery-controls">
+      <button id="prevGallery">‹</button>
+      <button id="nextGallery">›</button>
+    </div>
+    </section>    
 
     <!-- CTA -->
     <section class="trust">
@@ -146,19 +150,32 @@
 
     <!-- SLIDER SCRIPT -->
     <script>
-      const slider = document.getElementById("gallerySlider");
-
-      function slideLeft() {
-        slider.scrollLeft -= 320;
-      }
-
-      function slideRight() {
-        slider.scrollLeft += 320;
-      }
-    </script>
+      const items = document.querySelectorAll('.gallery-item');
+    
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.2 });
+    
+      items.forEach(item => {
+        item.style.opacity = 0;
+        item.style.transform = 'translateY(40px)';
+        item.style.transition = 'all 0.6s ease';
+        observer.observe(item);
+      });
+    </script>    
     <!-- LIGHTBOX -->
     <div id="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="Wedding band gallery image" />
     </div>
+    <div id="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" />
+    </div>
+    
   </body>
 </html>

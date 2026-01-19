@@ -123,9 +123,48 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-      <video autoplay muted loop class="hero-video">
-        <source src="assets/videos/barat-video.mp4" type="video/mp4" />
-      </video>
+      <div class="hero-slider">
+        <div
+          class="hero-slide active"
+          style="background-image: url('assets/images/background/1.JPG')"
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('assets/images/background/2.JPG');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('assets/images/background/3.JPG');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('assets/images/background/4.jpg');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('assets/images/background/5.jpg');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('assets/images/background/6.avif');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url('assets/images/background/7.webp');
+          "
+        ></div>
+      </div>
 
       <div class="hero-overlay">
         <span class="hero-badge">Since 1973</span>
@@ -139,6 +178,7 @@
         </div>
       </div>
     </section>
+
     <div class="hero-divider"></div>
 
     <!-- TRUST SECTION -->
@@ -150,39 +190,110 @@
         <div class="trust-box">👨‍👩‍👧 Trusted Family Business</div>
       </div>
     </section>
-    
+
+    <section class="about-royal">
+      <div class="about-container">
+        <!-- TEXT BLOCK -->
+        <div class="about-content">
+          <h2>About Suraj Band</h2>
+
+          <p>
+            Suraj Band is one of the most trusted and traditional wedding bands
+            in Dehradun, known for creating grand royal barat processions since
+            1973. With decades of experience, we blend heritage, discipline, and
+            musical excellence to make your wedding truly unforgettable.
+          </p>
+
+          <a href="about.html" class="about-btn">Read Our Story</a>
+        </div>
+
+        <!-- VIDEO BLOCK -->
+        <div class="about-video-frame">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/5oXEJhGtBkM?rel=0&modestbranding=1"
+              title="Suraj Band Performance"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- SERVICES PREVIEW -->
     <section class="services-preview" id="services">
-      <h2>Our Wedding Services</h2>
+      <h2 style="text-align: center">Our Wedding Services</h2>
 
-      <div class="services-grid">
-        <div
-          class="service-card"
-          style="background-image: url('assets/images/barat-band.jpeg')"
-        >
-          <div class="service-glass">Barat Band</div>
+      <div class="services-grid modern-services">
+        <!-- Service Card -->
+        <div class="service-card-modern popular">
+          <span class="popular-badge">Popular</span>
+          <img
+            src="assets/images/barat-band.jpeg"
+            alt="Traditional Barat Band in Dehradun"
+          />
+
+          <div class="service-content">
+            <h3>Traditional Barat Band</h3>
+            <p>
+              Our signature royal brass band that creates a grand and
+              traditional wedding procession, loved by families across Dehradun
+              since 1973.
+            </p>
+
+            <a href="contact.html" class="service-btn">Check Availability</a>
+          </div>
         </div>
 
-        <div
-          class="service-card"
-          style="background-image: url('assets/images/dhol.jpg')"
-        >
-          <div class="service-glass">Dhol & Percussion</div>
+        <div class="service-card-modern popular">
+          <span class="popular-badge">Popular</span>
+
+          <img src="assets/images/dhol.jpg" alt="Dhol & Percussion Band" />
+
+          <div class="service-content">
+            <h3>Dhol & Percussion</h3>
+            <p>
+              High-energy dhol and percussion performances that elevate wedding
+              barat excitement and cultural celebrations.
+            </p>
+
+            <a href="contact.html" class="service-btn">Check Availability</a>
+          </div>
         </div>
 
-        <div
-          class="service-card"
-          style="background-image: url('assets/images/ghodi-Baggi.jpeg')"
-        >
-          <div class="service-glass">Ghodi / Baggi</div>
+        <div class="service-card-modern">
+          <img
+            src="assets/images/ghodi-Baggi.jpeg"
+            alt="Ghodi & Baggi for Groom Entry"
+          />
+
+          <div class="service-content">
+            <h3>Ghodi & Baggi Entry</h3>
+            <p>
+              Royal groom entry arrangements with beautifully decorated ghodi
+              and traditional baggi for a majestic arrival.
+            </p>
+
+            <a href="contact.html" class="service-btn">Check Availability</a>
+          </div>
         </div>
 
-        <div
-          class="service-card"
-          style="background-image: url('assets/images/dj-wedding-lights.jpg')"
-        >
-          <div class="service-glass">DJ & Wedding Lights</div>
+        <div class="service-card-modern">
+          <img
+            src="assets/images/dj-wedding-lights.jpg"
+            alt="DJ & Wedding Lighting"
+          />
+
+          <div class="service-content">
+            <h3>DJ & Wedding Lights</h3>
+            <p>
+              Professional DJ sound systems and decorative wedding lighting for
+              receptions, barats, and grand events.
+            </p>
+
+            <a href="contact.html" class="service-btn">Check Availability</a>
+          </div>
         </div>
       </div>
     </section>
@@ -312,16 +423,6 @@
       </div>
     </section>
 
-    <!-- ABOUT PREVIEW -->
-    <section class="about-preview">
-      <h2>About Suraj Band</h2>
-      <p>
-        Suraj Band is one of the most trusted and traditional wedding bands in
-        Dehradun, known for creating grand royal barat processions since 1973.
-      </p>
-      <a href="about.html" class="read-more">Read More →</a>
-    </section>
-
     <!-- MAP SECTION -->
     <section class="map-section">
       <h2>Visit Us in Dehradun</h2>
@@ -385,7 +486,7 @@
     </footer>
 
     <!-- FLOATING BUTTONS -->
-    <a href="tel:+91XXXXXXXXXX" class="floating-call">📞</a>
+    <a href="tel:+91XXXXXXXXXX" class="floating-call"><span class="call-icon"></span></a>
     <script src="javascript/main.js"></script>
     <a
       href="https://wa.me/91XXXXXXXXXX"
