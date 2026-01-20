@@ -135,19 +135,24 @@ document.addEventListener("keydown", function (e) {
 /* =========================
    MOBILE MENU TOGGLE
 ========================= */
-function toggleMenu() {
+document.addEventListener("DOMContentLoaded", () => {
+
+  window.toggleMenu = function () {
     const menu = document.getElementById("mobileMenu");
     if (menu) {
       menu.classList.toggle("active");
     }
-  }
-  
-  /* close menu when link clicked */
-  document.querySelectorAll("#mobileMenu a").forEach(link => {
+  };
+
+  const links = document.querySelectorAll("#mobileMenu a");
+  links.forEach(link => {
     link.addEventListener("click", () => {
-      document.getElementById("mobileMenu").classList.remove("active");
+      document.getElementById("mobileMenu")?.classList.remove("active");
     });
   });
+
+});
+
   
   
 function scrollToServices() {
