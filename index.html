@@ -36,6 +36,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="preload" as="image" href="assets/images/background/1.jpg" />
 
     <script type="application/ld+json">
       {
@@ -44,7 +45,7 @@
         "name": "Suraj Band",
         "image": "https://yourwebsite.com/assets/images/logo.png",
         "url": "https://yourwebsite.com",
-        "telephone": "+91XXXXXXXXXX",
+        "telephone": "+918859956617",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Dehradun",
@@ -130,39 +131,27 @@
         ></div>
         <div
           class="hero-slide"
-          style="
-            background-image: url('assets/images/background/2.JPG');
-          "
+          style="background-image: url('assets/images/background/2.JPG')"
         ></div>
         <div
           class="hero-slide"
-          style="
-            background-image: url('assets/images/background/3.JPG');
-          "
+          style="background-image: url('assets/images/background/3.JPG')"
         ></div>
         <div
           class="hero-slide"
-          style="
-            background-image: url('assets/images/background/4.jpg');
-          "
+          style="background-image: url('assets/images/background/4.jpg')"
         ></div>
         <div
           class="hero-slide"
-          style="
-            background-image: url('assets/images/background/5.jpg');
-          "
+          style="background-image: url('assets/images/background/5.jpg')"
         ></div>
         <div
           class="hero-slide"
-          style="
-            background-image: url('assets/images/background/6.avif');
-          "
+          style="background-image: url('assets/images/background/6.avif')"
         ></div>
         <div
           class="hero-slide"
-          style="
-            background-image: url('assets/images/background/7.webp');
-          "
+          style="background-image: url('assets/images/background/7.webp')"
         ></div>
       </div>
 
@@ -225,8 +214,9 @@
     <section class="services-preview" id="services">
       <h2 style="text-align: center">Our Wedding Services</h2>
 
-      <div class="services-grid modern-services">
-        <!-- Service Card -->
+      <div class="services-slider">
+        <!-- Traditional Barat Band -->
+         <div class="services-track">
         <div class="service-card-modern popular">
           <span class="popular-badge">Popular</span>
           <img
@@ -238,63 +228,101 @@
             <h3>Traditional Barat Band</h3>
             <p>
               Our signature royal brass band that creates a grand and
-              traditional wedding procession, loved by families across Dehradun
-              since 1973.
+              traditional wedding procession, trusted by families across
+              Dehradun since 1973.
             </p>
 
             <a href="contact.html" class="service-btn">Check Availability</a>
           </div>
         </div>
 
+        <!-- Dhol -->
         <div class="service-card-modern popular">
           <span class="popular-badge">Popular</span>
-
-          <img src="assets/images/dhol.jpg" alt="Dhol & Percussion Band" />
+          <img src="assets/images/dhol.jpg" alt="Dhol Band for Wedding Barat" />
 
           <div class="service-content">
-            <h3>Dhol & Percussion</h3>
+            <h3>Dhol</h3>
             <p>
-              High-energy dhol and percussion performances that elevate wedding
-              barat excitement and cultural celebrations.
+              High-energy dhol performances that elevate wedding barat
+              excitement and keep the celebration vibrant and lively.
             </p>
 
             <a href="contact.html" class="service-btn">Check Availability</a>
           </div>
         </div>
 
+        <!-- Dhol & Damau (Pahadi) -->
+        <div class="service-card-modern">
+          <img
+            src="assets/images/background/6.avif"
+            alt="Traditional Dhol Damau Pahadi Band"
+          />
+
+          <div class="service-content">
+            <h3>Dhol & Damau</h3>
+            <p>
+              Authentic traditional Pahadi dhol-damau instruments, perfect for
+              cultural weddings, regional ceremonies, and Himalayan
+              celebrations.
+            </p>
+
+            <a href="contact.html" class="service-btn">Check Availability</a>
+          </div>
+        </div>
+
+        <!-- Ghodi Entry -->
+        <div class="service-card-modern">
+          <img src="assets/images/ghodi.webp" alt="Ghodi for Groom Entry" />
+
+          <div class="service-content">
+            <h3>Ghodi Entry</h3>
+            <p>
+              Royal groom entry on beautifully decorated ghodi, symbolizing
+              tradition, pride, and a majestic wedding arrival.
+            </p>
+
+            <a href="contact.html" class="service-btn">Check Availability</a>
+          </div>
+        </div>
+
+        <!-- Baggi Entry -->
         <div class="service-card-modern">
           <img
             src="assets/images/ghodi-Baggi.jpeg"
-            alt="Ghodi & Baggi for Groom Entry"
+            alt="Traditional Wedding Baggi"
           />
 
           <div class="service-content">
-            <h3>Ghodi & Baggi Entry</h3>
+            <h3>Traditional Baggi</h3>
             <p>
-              Royal groom entry arrangements with beautifully decorated ghodi
-              and traditional baggi for a majestic arrival.
+              Classic traditional baggi arrangements for royal-style groom and
+              family processions during wedding barats.
             </p>
 
             <a href="contact.html" class="service-btn">Check Availability</a>
           </div>
         </div>
 
+        <!-- Baraat Lights -->
         <div class="service-card-modern">
           <img
-            src="assets/images/dj-wedding-lights.jpg"
-            alt="DJ & Wedding Lighting"
+            src="assets/images/8 (3)-lightbox.jpg"
+            alt="Baraat Lighting for Wedding Procession"
           />
 
           <div class="service-content">
-            <h3>DJ & Wedding Lights</h3>
+            <h3>Baraat Lights</h3>
             <p>
-              Professional DJ sound systems and decorative wedding lighting for
-              receptions, barats, and grand events.
+              Decorative and powerful baraat lights specially designed for
+              wedding processions, creating a festive and royal night-time
+              atmosphere.
             </p>
 
             <a href="contact.html" class="service-btn">Check Availability</a>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -486,10 +514,12 @@
     </footer>
 
     <!-- FLOATING BUTTONS -->
-    <a href="tel:+91XXXXXXXXXX" class="floating-call"><span class="call-icon"></span></a>
+    <a href="tel:+918859956617" class="floating-call"
+      ><span class="call-icon"></span
+    ></a>
     <script src="javascript/main.js"></script>
     <a
-      href="https://wa.me/91XXXXXXXXXX"
+      href="https://wa.me/918859956617"
       class="floating-whatsapp"
       aria-label="Chat on WhatsApp"
       target="_blank"

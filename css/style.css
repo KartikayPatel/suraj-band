@@ -62,8 +62,9 @@ body {
   justify-content: space-between;
   padding: 14px 20px;
   background: #7a1e1e;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%; 
   z-index: 1200;
 }
 
@@ -72,13 +73,13 @@ body {
   font-size: 22px;
   font-weight: 600;
 }
-
+/* 
 .menu-toggle {
   display: none;
   font-size: 26px;
   color: #fff;
   cursor: pointer;
-}
+} */
 
 nav ul {
   display: flex;
@@ -780,7 +781,7 @@ nav {
   color: #555;
 }
 
-.main-header {
+/* .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -789,7 +790,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1200;
-}
+} */
 
 .logo {
   color: #d4af37;
@@ -797,12 +798,12 @@ nav {
   font-weight: 600;
 }
 
-.menu-toggle {
+/* .menu-toggle {
   display: none;
   font-size: 26px;
   color: #fff;
   cursor: pointer;
-}
+} */
 
 /* ABOUT ROYAL SECTION */
 .about-royal {
@@ -1030,5 +1031,92 @@ body {
 @media (max-width: 768px) {
   .gallery-section {
     padding: 0 16px; /* smaller gap on mobile */
+  }
+}
+/* SERVICES SLIDER */
+.services-slider {
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0 40px;
+}
+
+.services-track {
+  display: flex;
+  gap: 28px;
+  will-change: transform;
+  transition: transform 0.6s ease;
+}
+
+/* Card sizing */
+.service-card-modern {
+  flex: 0 0 320px; /* desktop card width */
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .service-card-modern {
+    flex: 0 0 280px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .services-track {
+    gap: 18px;
+  }
+
+  .service-card-modern {
+    flex: 0 0 85%;
+  }
+}
+
+/* CONTACT HEADER */
+.contact-hero {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.contact-subtitle {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* ADDRESS CARD */
+.contact-address-box {
+  max-width: 720px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #fff7ec, #fff);
+  border-radius: 18px;
+  padding: 22px 26px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-left: 6px solid #8b1d1d;
+}
+
+.address-icon {
+  font-size: 2.2rem;
+}
+
+.address-text strong {
+  font-size: 1.1rem;
+  color: #8b1d1d;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.address-text p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-address-box {
+    flex-direction: column;
+    text-align: center;
   }
 }

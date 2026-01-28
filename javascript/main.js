@@ -224,4 +224,18 @@ if (window.innerWidth <= 768) {
     document.getElementById('lightbox').style.display = 'none';
   });
   
-  
+  const track = document.querySelector(".services-track");
+const cards = document.querySelectorAll(".service-card-modern");
+
+if (track && cards.length > 0) {
+  let index = 0;
+
+  setInterval(() => {
+    const cardWidth = cards[0].offsetWidth + 28;
+    index++;
+
+    if (index >= cards.length) index = 0;
+
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }, 3500);
+}

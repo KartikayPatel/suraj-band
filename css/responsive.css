@@ -339,3 +339,53 @@
   }
 }
         
+/* CONTACT HEADER */
+.contact-hero {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.contact-subtitle {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* ADDRESS CARD */
+.contact-address-box {
+  max-width: 720px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #fff7ec, #fff);
+  border-radius: 18px;
+  padding: 22px 26px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-left: 6px solid #8b1d1d;
+}
+
+.address-icon {
+  font-size: 2.2rem;
+}
+
+.address-text strong {
+  font-size: 1.1rem;
+  color: #8b1d1d;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.address-text p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-address-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
