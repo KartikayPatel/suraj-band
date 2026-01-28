@@ -1033,40 +1033,40 @@ body {
     padding: 0 16px; /* smaller gap on mobile */
   }
 }
-/* SERVICES SLIDER */
-.services-slider {
-  overflow: hidden;
-  position: relative;
-  padding: 20px 0 40px;
+/* FORCE SERVICES SLIDER */
+.services-grid.modern-services {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 30px 40px;
+  scroll-behavior: smooth;
 }
 
-.services-track {
-  display: flex;
-  gap: 28px;
-  will-change: transform;
-  transition: transform 0.6s ease;
+/* hide scrollbar */
+.services-grid.modern-services::-webkit-scrollbar {
+  display: none;
+}
+.services-grid.modern-services {
+  scrollbar-width: none;
 }
 
-/* Card sizing */
+/* each card */
 .service-card-modern {
-  flex: 0 0 320px; /* desktop card width */
+  flex: 0 0 320px !important;
+  scroll-snap-align: start;
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .service-card-modern {
-    flex: 0 0 280px;
-  }
-}
-
-/* Mobile */
+/* mobile */
 @media (max-width: 768px) {
-  .services-track {
-    gap: 18px;
+  .services-grid.modern-services {
+    padding: 20px;
+    gap: 16px;
   }
 
   .service-card-modern {
-    flex: 0 0 85%;
+    flex: 0 0 85% !important;
   }
 }
 
