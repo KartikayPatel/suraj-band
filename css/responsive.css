@@ -53,7 +53,7 @@
     right: -260px; /* hidden off-screen */
     width: 260px;
     height: 100vh;
-    background: #7a1e1e;
+    background: #E63946;
     transition: right 0.4s ease;
     padding-top: 80px; /* space below header */
     box-shadow: -8px 0 30px rgba(0, 0, 0, 0.35);
@@ -145,7 +145,7 @@
     content: "•";
     position: absolute;
     right: 10px;
-    color: #d4af37;
+    color: #FFEA00;
     font-size: 18px;
   }
 
@@ -171,7 +171,7 @@
   section.trust {
     display: block;
     overflow: hidden;
-    background: #7a1e1e;
+    background: #E63946;
     padding: 18px 0;
   }
 
@@ -199,7 +199,7 @@
     content: "•";
     position: absolute;
     right: 10px;
-    color: #d4af37;
+    color: #FFEA00;
     font-size: 18px;
   }
 

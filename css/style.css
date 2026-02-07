@@ -1,5 +1,7 @@
 :root {
-  --gold: #c9a24d;
+  --gold: #C1121F;
+  --white: #ffffff;
+  --gold: #FFD700;
 }
 
 /* =========================
@@ -61,7 +63,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 14px 20px;
-  background: #7a1e1e;
+  background: #E63946;
   position: fixed;
   top: 0;
   width: 100%; 
@@ -69,7 +71,7 @@ body {
 }
 
 .logo {
-  color: #d4af37;
+  color: #FFEA00;
   font-size: 22px;
   font-weight: 600;
 }
@@ -95,7 +97,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-  color: #c9a24d;
+  color: var(--gold);
 }
 
 /* =========================
@@ -113,8 +115,8 @@ nav ul li a.active {
   letter-spacing: 1.2px;
   text-transform: uppercase;
 
-  color: #2b1b12;
-  background: linear-gradient(135deg, #e6c87a, #c9a24d);
+  color: #ffffff;
+  background: linear-gradient(135deg, #E63946, #C1121F);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
@@ -179,7 +181,7 @@ nav ul li a.active {
 
   background: transparent;
   border: 2px solid var(--gold);
-  color: var(--gold);
+  color: var(--white);
 
   font-size: 16px;
   font-weight: 500;
@@ -233,7 +235,7 @@ nav ul li a.active {
 
 .hero-overlay h1 {
   font-size: 48px;
-  color: #c9a24d;
+  color: #ffffff;
   margin-bottom: 18px;
   text-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
@@ -263,7 +265,7 @@ nav ul li a.active {
   width: 80px;
   height: 3px;
   margin: 18px auto 30px;
-  background: linear-gradient(to right, transparent, #c9a24d, transparent);
+  background: linear-gradient(to right, transparent, #C1121F, transparent);
 }
 
 /* =========================
@@ -302,7 +304,7 @@ nav ul li a.active {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 60px 40px;
-  background: #7a1e1e;
+  background: #E63946;
   color: #fff;
   text-align: center;
 }
@@ -326,7 +328,7 @@ nav ul li a.active {
 
 .about-preview h2 {
   font-size: 32px;
-  color: #7a1e1e;
+  color: #E63946;
   margin-bottom: 20px;
 }
 
@@ -339,7 +341,7 @@ nav ul li a.active {
 .read-more {
   display: inline-block;
   margin-top: 20px;
-  color: #7a1e1e;
+  color: #E63946;
   font-weight: bold;
   text-decoration: none;
 }
@@ -382,7 +384,7 @@ nav ul li a.active {
 .service-content h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #7a1e1e;
+  color: #E63946;
 }
 
 .service-content p {
@@ -397,15 +399,15 @@ nav ul li a.active {
   display: inline-block;
   padding: 10px 22px;
   border-radius: 999px;
-  border: 2px solid #d4af37;
-  color: #7a1e1e;
+  border: 2px solid #FFEA00;
+  color: #E63946;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .service-btn:hover {
-  background: #d4af37;
+  background: #FFEA00;
   color: #000;
 }
 
@@ -413,7 +415,7 @@ nav ul li a.active {
   position: absolute;
   top: 14px;
   left: 14px;
-  background: #d4af37;
+  background: #FFEA00;
   color: #000;
   font-size: 12px;
   font-weight: 600;
@@ -437,7 +439,7 @@ footer {
 }
 
 footer a {
-  color: #c9a24d;
+  color: #C1121F;
   text-decoration: none;
   margin-left: 10px;
 }
@@ -540,7 +542,7 @@ footer a {
   display: none;
   font-size: 30px;
   cursor: pointer;
-  color: #c9a24d;
+  color: #C1121F;
 }
 
 /* Default nav (desktop) */
@@ -631,7 +633,7 @@ nav {
 .testimonials h2 {
   text-align: center;
   margin-bottom: 50px;
-  color: #7a1e1e;
+  color: #E63946;
 }
 
 /* slider */
@@ -694,7 +696,7 @@ nav {
 }
 
 .stars {
-  color: #c9a24d;
+  color: #C1121F;
   font-size: 14px;
   margin-bottom: 6px;
 }
@@ -702,7 +704,7 @@ nav {
 .testimonial-glass h4 {
   margin: 0;
   font-size: 15px;
-  color: #7a1e1e;
+  color: #E63946;
 }
 
 .testimonial-glass span {
@@ -720,7 +722,7 @@ nav {
 }
 
 .map-section h2 {
-  color: #7a1e1e;
+  color: #E63946;
   margin-bottom: 10px;
 }
 
@@ -757,7 +759,7 @@ nav {
 
 .faq-section h2 {
   text-align: center;
-  color: #7a1e1e;
+  color: #E63946;
   margin-bottom: 50px;
 }
 
@@ -786,14 +788,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 14px 20px;
-  background: #7a1e1e;
+  background: #E63946;
   position: sticky;
   top: 0;
   z-index: 1200;
 } */
 
 .logo {
-  color: #d4af37;
+  color: #FFEA00;
   font-size: 22px;
   font-weight: 600;
 }
@@ -820,7 +822,7 @@ nav {
 
 .about-content h2 {
   font-size: 36px;
-  color: #7a1e1e;
+  color: #E63946;
   margin-bottom: 18px;
 }
 
@@ -835,15 +837,15 @@ nav {
   display: inline-block;
   padding: 12px 28px;
   border-radius: 999px;
-  border: 2px solid #d4af37;
-  color: #7a1e1e;
+  border: 2px solid #FFEA00;
+  color: #E63946;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .about-btn:hover {
-  background: #d4af37;
+  background: #FFEA00;
   color: #000;
 }
 
@@ -853,7 +855,7 @@ nav {
   padding: 10px;
   border-radius: 26px;
   overflow: hidden;
-  background: linear-gradient(135deg, #d4af37, #b8962e, #d4af37);
+  background: linear-gradient(135deg, #FFEA00, #b8962e, #FFEA00);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
 }
 
